@@ -1,0 +1,9 @@
+body{
+  /*background: #f4f2ed;*/
+
+ background-image:url(../images/9173.png); 
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-position:center;
+ opacity:0.9;
+}

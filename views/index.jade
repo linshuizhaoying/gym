@@ -1,0 +1,244 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/index.css')
+  nav.navbar(style="padding-bottom: 0px;margin-bottom: 0px;")
+    div.container
+      div.navbar
+        ul.nav.navbar-nav
+          blockquote
+            p 种一棵树最好的时间是十年前,其次是现在!
+            small CaunDerre
+        -if(!user)
+          ul.nav.navbar-nav.navbar-right
+            li.login
+              a(href="signin").btn.btn-circle.btn-default Login
+            li.reg
+              a(href="signup").btn.btn-circle.btn-default Reg
+        -else
+          ul.nav.navbar-nav.navbar-right
+            li.welcome
+              a(href="user").btn.btn-circle.btn-default 我的健身
+            li.logout
+              a(href="logout").btn.btn-circle.btn-default 退出登录
+  div.container
+    div.header.text-center
+      h1.font-red-haze All you need is start now!
+    div.clearfix.text-center
+      a(href="/signin").btn.btn-success.btn-lg Try it Now!
+    div.row.margin-top-10
+      div.col-lg-3.col-md-3.col-sm-6.col-xs-12
+        div.dashboard-stat2
+          div.display
+            div.number
+              h3.font-green-sharp 56
+              small 提交训练任务人数
+            div.icon
+              i.fa.fa-cubes
+          div.progress-info
+            div.progress
+              span.progress-bar.progress-bar-success.green-sharp(style="width: 46%;")
+                span.sr-only 现有46%处于中级阶段
+            div.status
+              div.status-title 中级阶段
+              div.status-number 现有46%处于该阶段
+      div.col-lg-3.col-md-3.col-sm-6.col-xs-12
+        div.dashboard-stat2
+          div.display
+            div.number
+              h3.font-blue-sharp 24
+              small 提交训练任务人数
+            div.icon
+              i.fa.fa-cubes
+          div.progress-info
+            div.progress
+              span.progress-bar.progress-bar-success.blue-sharp(style="width: 26%;")
+                span.sr-only 现有26%处于高级级阶段
+            div.status
+              div.status-title 高级阶段
+              div.status-number 现有26%处于该阶段
+      div.col-lg-3.col-md-3.col-sm-6.col-xs-12
+        div.dashboard-stat2
+          div.display
+            div.number
+              h3.font-red-haze 66
+              small 提交训练任务人数
+            div.icon
+              i.fa.fa-cubes
+          div.progress-info
+            div.progress
+              span.progress-bar.progress-bar-success.red-haze(style="width: 66%;")
+                span.sr-only 现有66%处于进阶阶段
+            div.status
+              div.status-title 进阶巩固阶段
+              div.status-number 现有66%处于该阶段
+      div.col-lg-3.col-md-3.col-sm-6.col-xs-12
+        div.dashboard-stat2
+          div.display
+            div.number
+              h3.font-purple-soft 88
+              small 现有会员数
+            div.icon
+              i.fa.fa-users
+          div.progress-info
+            div.progress
+              span.progress-bar.progress-bar-success.purple-soft(style="width: 80%;")
+                span.sr-only 
+            div.status
+              div.status-title 正在提交训练计划
+              div.status-number
+ 
+    div.col-md-6.col-sm-12.margin-top-10
+      div.portlet.light 
+        div.portlet-title
+          div.caption.caption-md
+            span.caption-subject.theme-font-color.bold.uppercase 健身报表
+          div.actions
+            div.btn-group.btn-group-devided(data-toggle="buttons")
+              label.btn.btn-transparent.grey-salsa.btn-circle.btn-sm.active Today
+                input(type="radio" name="options")#option1.toggle
+              label.btn.btn-transparent.grey-salsa.btn-circle.btn-sm Week
+                input(type="radio" name="options")#option2.toggle
+              label.btn.btn-transparent.grey-salsa.btn-circle.btn-sm Mouth
+                input(type="radio" name="options")#option3.toggle
+        div.portlet-body
+          div.row.number-stats.margin-bottom-30
+            div.col-md-6.col-sm-6.col-xs-6
+              div.stat-left
+                div.stat-chart
+                div.stat-number
+                  div.title 目标Total
+                  div.number 4096
+            div.col-md-6.col-sm-6.col-xs-6
+              div.stat-right
+                div.stat-chart
+                div.stat-number
+                  div.title 目前Total
+                  div.number 2048
+          div.table-scrollable.table-scrollable-borderless
+            table.table.table-hover.table-light
+              thread
+                tr.uppercase
+                  th(colspan="2") 会员
+                  th 训练计划
+                  th 所处等级
+                  th 已坚持时间
+                  th 计划达标率
+              tbody
+                tr
+                  td.fit
+                    img.user-pic(src="/images/avatar2.jpg")
+                  td Brain
+                  td 每周三次
+                  td 初级
+                  td 5周
+                  td 80%
+                tr
+                  td.fit
+                    img.user-pic(src="/images/avatar4.jpg")
+                  td Martin
+                  td 每天
+                  td 初级
+                  td 2周
+                  td 100%
+                tr
+                  td.fit
+                    img.user-pic(src="/images/avatar6.jpg")
+                  td Jina
+                  td 每天
+                  td 进阶
+                  td 12周
+                  td 90%
+                tr
+                  td.fit
+                    img.user-pic(src="/images/avatar8.jpg")
+                  td Hero
+                  td 周末
+                  td 初级
+                  td 2周
+                  td 90%
+    div.col-md-6.col-sm-12.margin-top-10
+      div.portlet.light
+        div.portlet-title
+          div.caption.caption-md
+            div.caption-subject.theme-font-color.bold.uppercase 健身动态
+        div.portlet-body
+          div.slimScrollDiv(style="position: relative; overflow: hidden; width: auto; height: 405px;")
+            div.scroller(style="height: 405px; overflow: hidden; width: auto;" data-always-visible="1" data-handle-color="#D7DCE2" data-initialized="1")
+              div.general-item-list
+                div.item
+                  div.item-head
+                    div.item-details
+                      img.item-pic(src="/images/avatar2.jpg")
+                      a.item-name.primary-link Nick Larson
+                      span.item-label 3小时之前
+                    span.item-status 开心
+                      span.badge.badge-empty.badge-success
+                  div.item-body 今天完成进阶项，明天巩固一天后台就能进行新的目标了！    
+                div.item
+                  div.item-head
+                    div.item-details
+                      img.item-pic(src="/images/avatar4.jpg")
+                      a.item-name.primary-link Martin
+                      span.item-label 5小时之前
+                    span.item-status 沮丧
+                      span.badge.badge-empty.badge-warning
+                  div.item-body 今天强行进阶失败，还是得打基础一段时间。   
+                div.item
+                  div.item-head
+                    div.item-details
+                      img.item-pic(src="/images/avatar6.jpg")
+                      a.item-name.primary-link Martin
+                      span.item-label 7小时之前
+                    span.item-status 欣喜
+                      span.badge.badge-empty.badge-warning
+                  div.item-body 今天刚刚开始锻炼计划，希望能保持住！
+                div.item
+                  div.item-head
+                    div.item-details
+                      img.item-pic(src="/images/avatar6.jpg")
+                      a.item-name.primary-link Martin
+                      span.item-label 7小时之前
+                    span.item-status 欣喜
+                      span.badge.badge-empty.badge-warning
+                  div.item-body 今天刚刚开始锻炼计划，希望能保持住！
+                div.item
+                  div.item-head
+                    div.item-details
+                      img.item-pic(src="/images/avatar6.jpg")
+                      a.item-name.primary-link Martin
+                      span.item-label 7小时之前
+                    span.item-status 欣喜
+                      span.badge.badge-empty.badge-warning
+                  div.item-body 今天刚刚开始锻炼计划，希望能保持住！
+                div.item
+                  div.item-head
+                    div.item-details
+                      img.item-pic(src="/images/avatar6.jpg")
+                      a.item-name.primary-link Martin
+                      span.item-label 7小时之前
+                    span.item-status 欣喜
+                      span.badge.badge-empty.badge-warning
+                  div.item-body 今天刚刚开始锻炼计划，希望能保持住！
+
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

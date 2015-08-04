@@ -1,0 +1,356 @@
+
+body {
+  font-family: 'Whitney SSm A', 'Whitney SSm B', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.gradient {
+  background: -webkit-linear-gradient(right, #6e363e, #f17467);
+  height: 1px;
+  display: none;
+}
+h1 {
+  font-weight: 600;
+}
+url {
+  word-break: break-all;
+  font-weight: bold;
+}
+code {
+  background: rgba(0,0,0,0.09);
+  color: #333;
+}
+pre {
+  border: 0;
+  font-size: 12px;
+  line-height: 2;
+  padding: 20px;
+  background: #eee;
+  margin-bottom: 20px;
+  font-family: "Roboto Mono";
+}
+pre:last-child {
+  margin-bottom: 0;
+}
+p {
+  line-height: 2;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 20px 0;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+p:first-child {
+  margin-top: 0;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+p:last-child {
+  margin-bottom: 0;
+}
+a {
+  color: #2559a9;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+.container {
+  max-width: 1080px;
+}
+.navbar-toggle {
+  position: absolute;
+  right: 0;
+}
+.navbar-toggle .icon-bar {
+  background: #666;
+}
+.btn {
+  transition: background-color 0.3s;
+}
+.btn.btn-success {
+  background-color: #27aa41;
+}
+.btn.btn-success:hover {
+  background-color: #1b7746;
+}
+pre.prettyprint,
+.wt-code {
+  border: 1px solid #eee !important;
+  padding: 20px !important;
+  background: #f9f9f9 !important;
+  margin-bottom: 0;
+}
+.wt-copy-button,
+.wp-view-jwt {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: -10px;
+  float: right;
+  letter-spacing: 1px;
+}
+.wt-copy-button:before,
+.wp-view-jwt:before {
+  font-family: "budicon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+/* opacity: .8; */
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  content: '\e8fe';
+  margin-right: 4px;
+}
+.wt-copy-button:before i,
+.wp-view-jwt:before i {
+  display: none;
+}
+.wt-view-jwt:before {
+  content: '\eb06';
+}
+.wt-copy-button {
+  display: none;
+}
+@media (min-width: 992px) {
+  .wt-copy-button {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+.navbar {
+  background: none;
+  border: 0;
+  margin: 0;
+}
+.navbar .container {
+  position: relative;
+}
+@media (min-width: 992px) {
+  .navbar {
+    padding: 20px 0;
+    text-align: center;
+  }
+  .navbar li {
+    float: none;
+    display: inline-block;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-nav {
+    margin: auto;
+    max-width: 400px;
+    float: none;
+  }
+}
+@media (min-width: 992px) {
+  ul.nav.navbar-nav.navbar-right {
+    position: absolute;
+    right: 15px;
+    top: 0;
+  }
+}
+.page-header {
+  background: #f1f1f1;
+  padding: 50px 15px;
+  text-align: center;
+  border: 0;
+  margin: 0 0 40px 0;
+}
+@media (min-width: 992px) {
+  .page-header {
+    padding: 80px 15px;
+  }
+}
+.page-header h1 {
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+.page-header p {
+  margin-bottom: 0;
+  font-size: 140%;
+  opacity: 0.6;
+}
+.navbar-collapse {
+  background: #ededed;
+}
+@media (min-width: 768px) {
+  .navbar-collapse {
+    background: transparent;
+  }
+}
+.navbar-nav>li>a {
+  color: #444;
+  transition: color 0.3s;
+  padding: 10px 15px;
+}
+.navbar-nav>li>a:hover {
+  background: none;
+  color: #000;
+}
+.navbar-nav>li>a:active,
+.navbar-nav>li>a:focus {
+  background: none;
+}
+.navbar-nav>li.try-it>a {
+  background: #27aa41;
+  color: #fff;
+  border-radius: 100px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 5px;
+  display: inline-block;
+}
+.navbar-nav li .avatar {
+  height: 40px;
+  border-radius: 100px;
+  margin-top: 5px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .navbar-nav li .avatar {
+    display: block;
+  }
+}
+.navbar-nav li .triangle {
+  margin-left: 6px;
+  display: none;
+}
+.navbar-nav .dropdown .dropdown-menu {
+  border-radius: 3px;
+  border: 0;
+  min-width: 120px;
+  padding: 0;
+  overflow: hidden;
+  font-size: 13px;
+}
+.navbar-nav .dropdown .dropdown-menu li {
+  display: block;
+  border-bottom: 1px solid #f1f1f1;
+}
+.navbar-nav .dropdown .dropdown-menu li:last-child {
+  border-bottom: 0;
+}
+.navbar-nav .dropdown .dropdown-menu li a {
+  padding: 10px 15px;
+}
+@media (min-width: 992px) {
+  .navbar-nav .dropdown .dropdown-menu li a {
+    padding: 10px 12px;
+  }
+}
+.navbar-nav .dropdown .dropdown-menu li a:hover {
+  background: none;
+}
+.navbar-nav .login a {
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-top: 0;
+  color: #000;
+  display: inline-block;
+  margin-left: 15px;
+}
+.navbar-nav .reg a {
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  padding: 5px 14px;
+  margin-top: 10px;
+  color: #000;
+  display: inline-block;
+  margin-left: 15px;
+}
+@media (min-width: 768px) {
+  .navbar-nav .login a {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .dropdown-menu {
+    display: block;
+    position: static;
+    background-color: transparent;
+    border: 0 none;
+    box-shadow: none;
+    margin-top: 0;
+    position: static;
+    width: 100%;
+  }
+}
+.navbar-brand {
+  text-align: center;
+  margin: auto;
+  display: block;
+  float: none;
+}
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-top: -12px;
+    float: left;
+  }
+}
+.navbar-brand img {
+  display: inline-block;
+}
+.navbar-brand .symbol {
+  margin: auto;
+  width: 30px;
+  display: inline;
+}
+@media (min-width: 992px) {
+  .navbar-brand .symbol {
+    margin-right: 12px;
+  }
+}
+.navbar-brand .symbol img {
+  height: 30px;
+  margin: auto;
+  margin-top: -6px;
+}
+@media (min-width: 992px) {
+  .navbar-brand .symbol img {
+    height: 40px;
+    margin-top: 2px;
+  }
+}
+.navbar-brand .logotype {
+  display: none;
+}
+@media (min-width: 992px) {
+  .navbar-brand .logotype {
+    display: inline-block;
+    margin-top: 2px;
+  }
+}
+.navbar-brand .logotype img {
+  height: 18px;
+  width: 82px;
+}
+.ul-center{
+	text-align: center;
+}

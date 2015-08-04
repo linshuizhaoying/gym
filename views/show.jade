@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/compenents-rounded.css')
+    link(rel='stylesheet', href='/stylesheets/plugins.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/sublime.css')
+    .wrapper
+    each content in contents
+      .row
+        .col-md-6.mb25.col-md-offset-3
+          section.panel.bordered
+            form
+              .note.note-success.note-shadow
+                h4.block #{content.name}
+                p #{content.content}
+          section.panel.bordered.post-comments
+              each pic in content.pic_array
+                .media
+                  .comment
+                    img(src="/images/#{pic}")
+                // end media
+                hr

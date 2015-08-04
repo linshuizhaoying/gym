@@ -1,0 +1,29 @@
+
+link(rel='stylesheet', href='/stylesheets/style.css')
+link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+link(rel='stylesheet', href='/stylesheets/compenents-rounded.css')
+link(rel='stylesheet', href='/stylesheets/plugins.css')
+link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+block content
+  link(rel='stylesheet', href='/stylesheets/sublime.css')
+  body(style="background-image: url(images/7396.png);background-repeat:no-repeat;background-attachment:fixed; opacity:0.9;")
+    .center-wrapper
+      .row.no-m
+        .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
+          section.panel.bg-white.no-b
+            ul.switcher-dash-action
+              li
+                a.selected(href='signin') Sign in
+              li.active
+                a(href='#') New account
+            .p15
+              form(role='form').alerterror
+                input.form-control.input-lg.mb25.regname(type='text', placeholder='Choose a username', autofocus='')
+                input.form-control.input-lg.mb25.regemail(type='text', placeholder='Email address')
+                input.form-control.input-lg.mb25.regpass(type='password', placeholder='Password')
+                input.form-control.input-lg.mb25.repeatpass(type='password', placeholder='Confirm password')
+                button.btn.btn-primary.btn-lg.btn-block(type='submit').regme Sign up
+                
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/reg.js')

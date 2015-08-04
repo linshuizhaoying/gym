@@ -1,0 +1,278 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/compenents-rounded.css')
+    link(rel='stylesheet', href='/stylesheets/plugins.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel='stylesheet', href='/stylesheets/light.css')
+    link(rel='stylesheet', href='/stylesheets/custom.css')
+    link(rel='stylesheet', href='/stylesheets/task.css')
+    link(rel='stylesheet', href='/stylesheets/dataTables.css')
+  body(style="background:#e9ecf3").page-header-fixed.page-sidebar-closed-hide-logo.page-sidebar-closed-hide-logo
+    .page-header.navbar.navbar-fixed-top
+      .page-header-inner
+      .page-sidebar.navbar-collapse.collapse
+          ul.page-sidebar-menu(style="margin-bottom: 0px;margin-top: 0px;")
+            li
+              a(href='index.html')
+                i.fa.fa-home
+                h5 首页
+        .page-top
+          .top-menu
+            ul.nav.navbar-nav.pull-right
+              li.dropdown.dropdown-user.dropdown-dark
+                a.dropdown-toggle(href='javascript:;', data-toggle='dropdown', data-hover='dropdown', data-close-others='true')
+                  span.username.username-hide-on-mobile
+                    | Admin
+                  img.img-circle(src='../images/avatar4.jpg')
+                
+              li.dropdown.dropdown-extended.quick-sidebar-toggler
+                a(href="/logout").fa.fa-arrow-left
+                  
+    .page-sidebar-wrapper(style="margin-left:20px;margin-top:80px")
+      // DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing
+      // DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed
+      .page-sidebar.navbar-collapse.collapse
+        // BEGIN SIDEBAR MENU
+        // DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders)
+        // DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode
+        // DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode
+        // DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing
+        // DOC: Set data-keep-expand="true" to keep the submenues expanded
+        // DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed
+        ul.page-sidebar-menu.text-center
+          li.start.active.menuselect1
+            a(href='#')
+              span.title 健身系统概况
+              i.fa.fa-child
+          li.menuselect2
+            a(href='#')
+              span.title 用户管理
+              i.fa.fa-archive
+          li.menuselect3
+            a(href='#')
+              span.title 用户健身计划管理
+              i.fa.fa-cubes
+          li.menuselect4
+            a(href='#')
+              span.title 健身项目管理
+              i.fa.fa-navicon
+
+    .page-content-wrapper
+      .page-content.menu1
+        // BEGIN PAGE HEAD
+        .page-head
+          // BEGIN PAGE TITLE
+          .page-title
+            h1
+              | 健身系统概况 
+              small 用户数量 & 日记数量 & 健身计划数量
+        .row
+          .col-md-5.col-sm-12(style="margin-left:10px")
+            // BEGIN PORTLET
+            .portlet.light.tasks-widget
+              .portlet-title
+                .caption.caption-md
+                  i.icon-bar-chart.theme-font-color.hide
+                  span.caption-subject.theme-font-color.bold.uppercase 今日任务列表
+              .portlet-body
+                .admin-task-content
+                  .slimScrollDiv(style='position: relative; overflow: hidden; width: auto; height: 282px;')
+                    .scroller(style='height: 282px; overflow: hidden; width: auto;', data-always-visible='1', data-rail-visible1='0', data-handle-color='#D7DCE2', data-initialized='1')
+                      // START TASK LIST
+                      ul.admin-task-list
+                        li
+                          .admin-task-checkbox
+                            input(type='hidden', value='1', name='test')
+                            .checker
+                              span
+                                input.liChild(type='checkbox', value='2', name='test')
+                          .admin-task-title
+                            span.admin-task-title-sp
+                              | Present 2013 Year IPO Statistics at Board Meeting
+                            span.label.label-sm.label-success.admin-task-label 已完成
+                            span.admin-task-bell
+                              i.fa.fa-bell-o
+                          
+                        li
+                          .admin-task-checkbox
+                            .checker
+                              span.checked
+                                input.liChild(type='checkbox', value='')
+                          .admin-task-title
+                            span.admin-task-title-sp
+                              | Hold An Interview for Marketing Manager Position
+                            span.label.label-sm.label-danger.admin-task-label 未完成
+                            span.admin-task-bell
+                              i.fa.fa-bell-o
+                          
+                      // END START TASK LIST
+                    .slimScrollBar(style='width: 7px; position: absolute; top: 1px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 180.736px; background: rgb(215, 220, 226);')
+                    .slimScrollRail(style='width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(234, 234, 234);')
+                .admin-task-footer
+                  .btn-arrow-link.pull-right
+                    a(href='javascript:;') 提交训练结果
+            // END PORTLET
+          .col-md-6.col-sm-12(style="margin-left:10px")
+            .portlet.box.grey-cascade
+              .portlet-title
+                .caption 您所拥有的训练计划
+            .portlet.box.green
+              .portlet-title
+                .caption
+                  i.fa.fa-gift
+                  | 囚徒六十式-墙壁俯卧撑
+                .tools
+                  a.expand(href='javascript:;', data-original-title='', title='')
+              .portlet-body.display-hide(style='display: none;')
+                strong.btn.btn-success.btn-sm 查看更多
+                p
+                  | 面对墙壁站立,双脚并拢,双臂伸直,与肩同宽,双手平放在墙上,手掌与胸等高。这 是该动作的起始姿势(图 1)。弯曲肘部,直到前额轻触墙面。这是该动作的结束姿势(图 2)。 然后将自己推回到起始姿势,如此重复。
+            .portlet.box.green
+              .portlet-title
+                .caption
+                  i.fa.fa-gift
+                  | 囚徒六十式-坐姿屈膝
+                .tools
+                  a.expand(href='javascript:;', data-original-title='', title='')
+              .portlet-body.display-hide(style='display: none;')
+                strong.btn.btn-success.btn-sm 查看更多
+                p
+                  | 坐在椅子或床的边缘,身体略微向后倾斜,双手抓住边沿,两腿伸直,双脚并拢,脚跟 距离地面几厘米。这是该动作的起始姿势(图 61)。平缓地抬起膝盖,直到膝盖距胸部约 15 一 25 厘米。在此过程中呼气,动作完成时呼气结束,腹肌保持收缩状态。这是该动作的结 束姿势(图 62)。暂停 1 秒钟,进行反向运动并回到起始姿势。伸展膝盖的同时吸气。双脚 应该始终沿着一条直线移动,而且始终保持悬空,直到一组动作完成方可接触地面。腹部要 始终收缩,动作要慢,要抵制快速完成动作的冲动。如果需要,可以在两次动作之间喘几口 气(所有中段练习都一样)。
+      .page-content.menu2.hide
+        // BEGIN PAGE HEAD
+        .page-head
+          // BEGIN PAGE TITLE
+          .page-title
+            h1
+              | 用户管理
+              small 资料修改 & 删除用户
+        .row
+        
+        
+      .page-content.menu3.hide
+        // BEGIN PAGE HEAD
+        .page-head
+          // BEGIN PAGE TITLE
+          .page-title
+            h1
+              | 用户健身计划管理
+              small 计划安排
+        .row
+
+      .page-content.menu4.hide
+        // BEGIN PAGE HEAD
+        .page-head
+          // BEGIN PAGE TITLE
+          .page-title
+            h1
+              | 健身项目管理
+              small 新增项目 & 修改项目
+        .row
+          .col-md-12
+            // BEGIN EXAMPLE TABLE PORTLET
+            .portlet.box.blue
+              .portlet-title
+                .caption
+                  i.fa.fa-edit
+                  | 健身项目管理
+              .portlet-body(style='display: block;')
+                .table-toolbar
+                  .row.text-center
+                    .col-md-12
+                       h3.label.label-primary(style="margin-left:5px") 标题：
+                       textarea.form-control.input-inline(style="margin: 15px 0px 0px 5px; width: 530px; height: 38px;")#traintitle
+                    .col-md-12
+                       h3.label.label-primary(style="margin-left:5px") 描述：
+                       textarea.form-control.input-inline(style="margin: 15px 0px 0px 5px; width: 530px; height: 76px;")#traindesc
+                    .col-md-12
+                       h3.label.label-primary(style="margin-left:5px") 初级标准：
+                         select.form-control.input-small.input-inline(style="margin-left:5px")#trainjunior_num
+                           option(value="1") 一组
+                           option(value="2") 二组
+                           option(value="3") 三组
+                       input.form-control.input-inline(style="margin: 15px 0px 0px 5px; width: 80px; height: 36px;")#trainjunior_rate
+                       label 个/圈/米/次
+                    .col-md-12
+                       h3.label.label-primary(style="margin-left:5px") 中级标准：
+                         select.form-control.input-small.input-inline(style="margin-left:5px")#trainmiddle_num
+                           option(value="1") 一组
+                           option(value="2") 二组
+                           option(value="3") 三组
+                       input.form-control.input-inline(style="margin: 15px 0px 0px 5px; width: 80px; height: 36px;")#trainmiddle_rate
+                       label 个/圈/米/次
+                    .col-md-12
+                       h3.label.label-primary(style="margin-left:5px") 进阶标准：
+                         select.form-control.input-small.input-inline(style="margin-left:5px")#trainadvanced_num
+                           option(value="1") 一组
+                           option(value="2") 二组
+                           option(value="3") 三组
+                       input.form-control.input-inline(style="margin: 15px 0px 0px 5px; width: 80px; height: 36px;")#trainadvanced_rate
+                       label 个/圈/米/次
+                    .col-md-12(style="margin-top:15px")
+                      h2.btn.btn-info(style="margin-left:5px") 示范图上传：
+                      form(method='post', enctype='multipart/form-data', action='/upload',style="margin-top:15px")#frmUploadFile1
+                        .col-md-3.col-md-offset-3
+                          input(name='inputFile', type='file', multiple='mutiple').form-control
+                        .col-md-3
+                          input#imgurl1.alert.alert-success
+                        .col-md-2
+                          i.fa.fa-upload
+                          .btn.btn-primary.uploadMe1 上传
+                      form(method='post', enctype='multipart/form-data', action='/upload',style="margin-top:15px")#frmUploadFile2
+                        .col-md-3.col-md-offset-3
+                          input(name='inputFile', type='file', multiple='mutiple').form-control
+                        .col-md-3
+                          input#imgurl2.alert.alert-success
+                        .col-md-2
+                          i.fa.fa-upload
+                          .btn.btn-primary.uploadMe2 上传
+                      form(method='post', enctype='multipart/form-data', action='/upload',style="margin-top:15px")#frmUploadFile3
+                        .col-md-3.col-md-offset-3
+                          input(name='inputFile', type='file', multiple='mutiple').form-control
+                        .col-md-3
+                          input#imgurl3.alert.alert-success
+                        .col-md-2
+                          i.fa.fa-upload
+                          .btn.btn-primary.uploadMe3 上传
+                    .btn-group
+                      button#sample_editable_1_new.btn.red.addnewtrain
+                        | Add New 
+                        i.fa.fa-plus
+                #sample_editable_1_wrapper.dataTables_wrapper.no-footer
+                  .table-scrollable
+                    table#sample_editable_1.table.table-striped.table-hover.table-bordered.dataTable.no-footer(role='grid', aria-describedby='sample_editable_1_info', style='width: 871px;')
+                      thead
+                        tr(role='row')
+                          th 标题
+                          th 内容
+                          th 初级标准
+                          th 中级标准
+                          th 进阶标准
+                          th 删除
+                      tbody
+                      each train in trains
+                        tr 
+                          td 
+                            a(href="/show/#{train.id}") #{train.name}
+                          td #{train.content}
+                          td #{train.junior_num} 组 每组#{train.junior_rate}次
+                          td #{train.middle_num} 组 每组#{train.middle_rate}次
+                          td #{train.advanced_num} 组 每组#{train.advanced_rate}次
+                          th 
+                            a(href="/deletetrain/#{train.id}").btn.btn-danger 删除
+                      
+    script(src='javascripts/jquery.min.js')
+    script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/admin_task.js')
+    script(src='javascripts/jquery.slimscroll.min.js')
+    script(src='javascripts/metronic.js')
+    script(src='javascripts/menuselect.js')
+    script(src='javascripts/upload.js')
+    script(src='javascripts/addnewtrain.js')
+    script(type='text/javascript').
+      $(function(){$('.slimScrollDiv').slimScroll({height: '220px'});Tasks.initDashboardWidget();Metronic.init();MenuSelect.initSelect();});
